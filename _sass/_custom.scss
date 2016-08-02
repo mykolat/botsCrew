@@ -12,16 +12,15 @@ hr {
     max-width: 50px;
 }
 hr.light {
-    border-color: white;
+    border-color: $gray-light;
+    border-width: thin;
+    &--pull-left {
+        margin: 30px 0;
+    }
 }
-// a {
-//     @include transition-all;
-//     color: $theme-primary;
-//     &:hover,
-//     &:focus {
-//         color: darken($theme-primary, 10%);
-//     }
-// }
+a {
+    @include transition-all;
+}
 h1,
 h2,
 h3,
@@ -187,6 +186,8 @@ header {
 // Sections
 .section-heading {
     margin-top: 0;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 .service-box {
     max-width: 400px;
@@ -194,8 +195,24 @@ header {
     @media (min-width: 992px) {
         margin: 20px auto 0;
     }
+    h4 {
+        margin: 30px 0 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
     p {
         margin-bottom: 0;
+    }
+}
+.box-image {
+    border: solid 1px black;
+    padding: 21px;
+    width: 70px;
+    height: 70px;
+    transform: rotate(45deg);
+    margin: 0 auto;
+    & > div {
+        transform: rotate(-45deg);
     }
 }
 .portfolio-box {
@@ -257,10 +274,6 @@ header {
     h2 {
         margin: 0 auto 20px;
     }
-}
-// Bootstrap Overrides
-.text-primary {
-    color: $theme-primary;
 }
 .no-gutter > [class*='col-'] {
     padding-right: 0;
@@ -329,7 +342,6 @@ input[type="submit"] {
     }
 }
 .iphone-frame {
-
     &:after {
         content: "";
         background: url("../img/iphone.png");

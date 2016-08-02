@@ -13,15 +13,15 @@ markdown: kramdown
 
 text:
   contact:
-    name:    'Як до вас звертатися?'
-    email:    'Поштова скринька'
-    phone:    'Номер телефону'
-    subject:  'Нове повідомлення'
-    submit:   'Відправити'
+    name:    'Name'
+    email:    'Email'
+    message:    'Message'
+    subject:  'Subject'
+    submit:   'submit'
     ajax:
-      sending:  'відпралення..'
-      sent:     'Відправлено'
-      error:    'Помилка'
+      sending:  'sumbmiting..'
+      sent:     'Thanks, we will contact you soon'
+      error:    'Error'
 
 menu:
   about: Про компанію
