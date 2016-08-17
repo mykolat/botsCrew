@@ -10,15 +10,15 @@ hr {
     border-color: $brand-primary;
     border-width: 3px;
     max-width: 50px;
-}
-hr.light {
-    border-color: $gray-light;
-    border-width: thin;
-    &--pull-left {
-        margin: 30px 0;
-    }
-    &--inverse {
-        border-color: #fff;
+    &.light {
+        border-color: $gray-light;
+        border-width: thin;
+        &--pull-left {
+            margin: 30px 0;
+        }
+        &--inverse {
+            border-color: #fff;
+        }
     }
 }
 a {
@@ -372,4 +372,79 @@ input[type="submit"] {
         background-position: center;
         padding: 120px 0 0;
     }
+    &--member {
+        padding: 20px 5px 5px;
+        min-height: 290px;
+        @include transition(all 200ms ease-in);
+    }
+    &__text {
+        position: relative;
+        word-break: break-word;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        text-align: center;
+        font-size: 24px;
+        font-family: Lora;
+        padding: 0 20px;
+
+        // text-align: center;
+        // // font-weight: bold;
+        font-size: 21px;
+        // // line-height: 50px;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        color: white;
+        // height: 100%;
+        &-name {
+          font-weight: bold;
+        }
+    }
+    &__hover {
+        @include transition(0.5s);
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        display: block;
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        cursor: pointer;
+        z-index: 50;
+    }
+    &__image {
+        overflow: hidden;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        position: relative;
+        margin: 0 auto;
+        @include transition(1s);
+        img {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+    }
+    &:hover {
+        .box__image {
+            width: 250px;
+            height: 250px;
+        }
+        .box__hover {
+            opacity: 1;
+        }
+    }
+}
+#team {
+    position: relative;
+}
+.team-members {
+    position: relative;
+    z-index: 10;
 }
